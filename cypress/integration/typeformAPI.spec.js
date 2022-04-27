@@ -13,7 +13,7 @@ describe('Typeform API tests', () => {
       const { alias, email, language } = body
   
       expect(status).to.eq(200)
-      expect(alias).to.eq('Walmyr Filho')
+      expect(alias).to.eq('Larrysa')
       expect(email).to.eq(Cypress.env('username'))
       expect(language).to.eq('en')
     })
