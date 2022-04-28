@@ -11,9 +11,9 @@ describe('Typeform API tests', () => {
       headers: { authorization }
     }).should(({ status, body }) => { //função de callback/response = objeto de retorno
       const { alias, email, language } = body
-  
+
       expect(status).to.eq(200)
-      expect(alias).to.eq('Larrysa')
+      expect(alias).to.eq('Figueiredo Larrysa')
       expect(email).to.eq(Cypress.env('username'))
       expect(language).to.eq('en')
     })
@@ -28,7 +28,7 @@ describe('Typeform API tests', () => {
       expect(body.total_items).to.eq(body.items.length)
     })
   })
-  
+
   context('Cleanup before start', () => {
     beforeEach(() => {
       cy.request({
